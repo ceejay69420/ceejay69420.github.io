@@ -19,8 +19,8 @@ save.addEventListener("click", async (e) => {
         alert("New Resident Added Successfully")
         save.innerText = "Saved"
         save.setAttribute("disabled", false);
-        name = "";
-        age = "";
+        let name = "";
+        let age = "";
         getResident();
         getTotalCount();
 
