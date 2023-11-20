@@ -7,6 +7,9 @@ const database = supabase.createClient(url, key);
 let save = document.querySelector("#save");
 save.addEventListener("click", async (e) => {
     e.preventDefault();
+    document.querySelector("#name").value = "";
+    document.querySelector("#age").value = "";
+
     let name = document.querySelector("#name").value;
     let age = document.querySelector("#age").value;
     save.innerText = "Saving....";
@@ -19,8 +22,6 @@ save.addEventListener("click", async (e) => {
         alert("New Resident Added Successfully")
         save.innerText = "Saved"
         save.setAttribute("disabled", false);
-        let name = "";
-        let age = "";
         getResident();
         getTotalCount();
 
